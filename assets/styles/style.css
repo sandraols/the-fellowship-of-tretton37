@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.underscore {
+  animation: underscore 1s cubic-bezier(0.46, 0.02, 0.07, 0.97) infinite;
+}
+
+.underscore--blue {
+  color: #032c54;
+}
+
+/* ------------------- */
+/* INTRO */
+/* ------------------- */
+.background {
+  background-image: url("./../ninjas-background.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.header__intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.title__intro {
+  font-family: "space mono", sans-serif;
+  color: white;
+  width: 64%;
+  font-size: 6vw;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: auto;
+}
+
+.scroll__container {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.fa-chevron-down {
+  color: white;
+}
+
+/* ------------------- */
+/* KEYFRAMES */
+/* ------------------- */
+@keyframes underscore {
+  50% {
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
