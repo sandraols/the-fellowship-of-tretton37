@@ -27,70 +27,32 @@
             </div>
             <section id="consultants__section" class="consultants__section">
                 <div class="consultants__container">
-                    <div class="consultant__card">
-                        <div class="left__content">
-                            <h3 class="name info">Matija Potočnik Pribošič</h3>
-                            <p class="office info">Office: Lund</p>
-                            <div class="icons info">
-                                <i class="fab fa-linkedin"></i>
-                                <i class="fab fa-twitter-square"></i>
-                                <i class="fab fa-github-square"></i>
-                            </div>
-                            <button class="button">Read more</button>
-                        </div>
-                        <div class="right__content">
-                            <div class="portrait" style="background-image: url('https://tretton37img.blob.core.windows.net/ninja-portrait/matija-potocnik-pribosic-cv');"></div>
-                        </div>
-                    </div>
-                    <div class="consultant__card">
-                        <div class="left__content">
-                            <h3 class="name info">Joakim Nyström</h3>
-                            <p class="office info">Office: Lund</p>
-                            <div class="icons info">
-                                <i class="fab fa-linkedin"></i>
-                                <i class="fab fa-twitter-square"></i>
-                                <i class="fab fa-github-square"></i>
-                            </div>
-                            <button class="button">Read more</button>
-                        </div>
-                        <div class="right__content">
-                            <div class="portrait" style="background-image: url('https://tretton37img.blob.core.windows.net/ninja-portrait/urska-dobnikar-petric-cv');"></div>
-                        </div>
-                    </div>
-                    <div class="consultant__card">
-                        <div class="left__content">
-                            <h3 class="name info">Urška Dobnikar Petrič</h3>
-                            <p class="office info">Office: Ljubljana</p>
-                            <div class="icons info">
-                                <i class="fab fa-linkedin"></i>
-                                <i class="fab fa-twitter-square"></i>
-                                <i class="fab fa-github-square"></i>
-                            </div>
-                            <button class="button">Read more</button>
-                        </div>
-                        <div class="right__content">
-                            <div class="portrait" style="background-image: url('https://tretton37img.blob.core.windows.net/ninja-portrait/joakim-nystro%CC%88m-cv');"></div>
-                        </div>
-                    </div>
-                    <div class="consultant__card">
-                        <div class="left__content">
-                            <h3 class="name info">Erik Stoy</h3>
-                            <p class="office info">Office: Lund</p>
-                            <div class="icons info">
-                                <i class="fab fa-linkedin"></i>
-                                <i class="fab fa-twitter-square"></i>
-                                <i class="fab fa-github-square"></i>
-                            </div>
-                            <button class="button">Read more</button>
-                        </div>
-                        <div class="right__content">
-                            <div class="portrait" style="background-image: url('https://tretton37img.blob.core.windows.net/ninja-portrait/erik-stoy');"></div>
-                        </div>
-                    </div>
+
                 </div>
             </section>
         </main>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js"></script>
+    <script id="consultant-template" type="text/x-handlebars-template">
+        {{#each this}}
+        <div class="consultant__card">
+            <div class="left__content">
+                <h3 class="name info">{{name}}</h3>
+                <p class="office info">Office: {{office}}</p>
+                <div class="icons info">
+                    {{#if linkedIn}}<i class="fab fa-linkedin"></i>{{/if}}
+                    {{#if twitter}}<i class="fab fa-twitter-square"></i>{{/if}}
+                    {{#if gitHub}}<i class="fab fa-github-square"></i>{{/if}}
+                    {{#if stackOverflow}}<i class="fab fa-stack-overflow"></i>{{/if}}   
+                </div>
+                <button class="button">Read more</button>
+            </div>
+            <div class="right__content">
+                <div class="portrait" style="background-image: url('{{imagePortraitUrl}}');"></div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="./assets/script.js"></script>    
     <script src="https://kit.fontawesome.com/9474fc5a33.js" crossorigin="anonymous"></script>

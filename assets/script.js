@@ -6,3 +6,14 @@ $(window).scroll(function() {
         $('.header__scroll').removeClass('show');				
     };   	
 });
+
+const source = document.getElementById('consultant-template').innerHTML;
+const consultantBoxTemplate = Handlebars.compile(source);
+
+$.get('https://api.tretton37.com/ninjas', function(consultants) {
+    console.log(consultants);
+     const display = consultantBoxTemplate(consultants);
+     console.log(display);
+    $( ".consultants__container" ).append(display);
+    
+});
