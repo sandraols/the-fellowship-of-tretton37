@@ -1,18 +1,23 @@
+$white-color: rgb(255, 255, 255);
+$primary-color: rgb(3, 44, 84);
+$secondary-color: rgb(130, 196, 106);
+
+$main-font: 'space mono', sans-serif;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: $main-font;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-$white-color: rgb(255, 255, 255);
-$primary-color: rgb(3, 44, 84);
-$secondary-color: rgb(130, 196, 106);
-
-$main-font: 'space mono', sans-serif;
+a {
+    color: $primary-color;
+}
 
 // mixins for cross browser compability
 @mixin transition($transition...) {
@@ -30,7 +35,7 @@ $main-font: 'space mono', sans-serif;
     transform: $transform;
 }
 
-// mixins for flexbox properties
+// mixin for flexbox
 @mixin justify-align($justify, $align) {
     justify-content: $justify;
     align-items: $align;
@@ -83,7 +88,6 @@ $main-font: 'space mono', sans-serif;
 }
 
 .title__intro {
-    font-family: $main-font;
     color: $white-color;
     width: 64%;
     font-size: 6vw;
@@ -99,8 +103,8 @@ $main-font: 'space mono', sans-serif;
     display: flex;
     align-items: center;
     flex-direction: column;
-    cursor: pointer;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .fa-chevron-down {
@@ -111,7 +115,6 @@ $main-font: 'space mono', sans-serif;
 /* ------------------- */
 /* MAIN SECTION */
 /* ------------------- */
-
 
 /* --------- FADE IN HEADER ---------- */
 
@@ -129,11 +132,10 @@ $main-font: 'space mono', sans-serif;
 
 .show {
     opacity: 1;
-  }
+}
 
 .main__title {
     color: $white-color;
-    font-family: $main-font;
     text-transform: uppercase;
     font-size: 2.5vw;  
 }
@@ -187,7 +189,6 @@ $main-font: 'space mono', sans-serif;
 }
 
 .info {
-    font-family: $main-font;
     color: $primary-color;
     text-transform: uppercase;
 }
@@ -220,7 +221,6 @@ $main-font: 'space mono', sans-serif;
 
 .button {
     background: $primary-color;
-    font-family: $main-font;
     color: $white-color;
     width: 120px;
     border: none;
@@ -253,6 +253,7 @@ $main-font: 'space mono', sans-serif;
 .portrait:hover {
     cursor: pointer;
 }
+
 
 /* ------------------- */
 /* KEYFRAMES */
@@ -320,10 +321,7 @@ and (max-device-width : 1024px)  {
     }
 }
 
-@media only screen 
-and (min-device-width: 320px) 
-and (max-device-width: 568px)
-and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (max-width: 320px)  {
     .consultant__card {
         @include transform(scale(.7));
         margin: -6vw

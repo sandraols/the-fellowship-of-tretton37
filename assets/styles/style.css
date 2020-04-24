@@ -2,10 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "space mono", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+a {
+  color: #032c54;
 }
 
 .underscore {
@@ -51,7 +56,6 @@ html {
 }
 
 .title__intro {
-  font-family: "space mono", sans-serif;
   color: white;
   width: 64%;
   font-size: 6vw;
@@ -67,8 +71,8 @@ html {
   display: flex;
   align-items: center;
   flex-direction: column;
-  cursor: pointer;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .fa-chevron-down {
@@ -102,7 +106,6 @@ html {
 
 .main__title {
   color: white;
-  font-family: "space mono", sans-serif;
   text-transform: uppercase;
   font-size: 2.5vw;
 }
@@ -157,7 +160,6 @@ html {
 }
 
 .info {
-  font-family: "space mono", sans-serif;
   color: #032c54;
   text-transform: uppercase;
 }
@@ -190,7 +192,6 @@ html {
 
 .button {
   background: #032c54;
-  font-family: "space mono", sans-serif;
   color: white;
   width: 120px;
   border: none;
@@ -281,7 +282,7 @@ html {
     margin-right: 20px;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (max-width: 320px) {
   .consultant__card {
     -moz-transform: scale(0.7);
     -o-transform: scale(0.7);

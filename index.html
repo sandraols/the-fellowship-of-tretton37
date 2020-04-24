@@ -40,10 +40,10 @@
                 <h3 class="name info">{{name}}</h3>
                 <p class="office info">Office: {{office}}</p>
                 <div class="icons info">
-                    {{#if linkedIn}}<i class="fab fa-linkedin"></i>{{/if}}
-                    {{#if twitter}}<i class="fab fa-twitter-square"></i>{{/if}}
-                    {{#if gitHub}}<i class="fab fa-github-square"></i>{{/if}}
-                    {{#if stackOverflow}}<i class="fab fa-stack-overflow"></i>{{/if}}   
+                    {{#if linkedIn}}<a href="https://www.linkedin.com{{linkedIn}}" target="_blank"><i class="fab fa-linkedin"></i></a>{{/if}}
+                    {{#if twitter}}<a href="https://twitter.com/{{twitter}}" target="_blank"><i class="fab fa-twitter-square"></i></a>{{/if}}
+                    {{#if gitHub}}<a href="https://github.com/{{gitHub}}" target="_blank"><i class="fab fa-github-square"></i></a>{{/if}}
+                    {{#if stackOverflow}}<a href="https://stackoverflow.com/users/{{stackOverflow}}" target="_blank"><i class="fab fa-stack-overflow"></i></a>{{/if}}   
                 </div>
                 <button class="button">Read more</button>
             </div>
