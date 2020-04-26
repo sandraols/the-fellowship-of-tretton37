@@ -22,7 +22,7 @@ $.get('https://api.tretton37.com/ninjas', function(consultants) {
           return 1;
         }
         return 0;
-      });
+    });
     //sort consultants by office
     // const consultantsSortedByOffice = consultants.sort(function(a, b) {
     // var nameA = a.office.toUpperCase();
@@ -38,3 +38,4 @@ $.get('https://api.tretton37.com/ninjas', function(consultants) {
     const display = consultantBoxTemplate(consultants);
     $( ".consultants__container" ).append(display);
 });
+
